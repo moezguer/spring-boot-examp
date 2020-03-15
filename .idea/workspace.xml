@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="199fe500-8c8f-403c-b052-843135aa394b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Z8oXHGSpH8fsNxzZaRelRaWhgV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/moezguer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/moezguer/Model" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/moezguer/Model" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/moezguer/DB/Model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Classico" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.moezguer.StartBookApplication" />
+      <module name="spring-boot-examp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="199fe500-8c8f-403c-b052-843135aa394b" name="Default Changelist" comment="" />
+      <created>1584230119969</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584230119969</updated>
+      <workItem from="1584230121289" duration="209000" />
+      <workItem from="1584230426952" duration="3279000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="616" y="277" width="811" height="669" key="#Project_Structure" timestamp="1584230443341">
+      <screen x="0" y="23" width="2048" height="1178" />
+    </state>
+    <state x="616" y="277" width="811" height="669" key="#Project_Structure/0.23.2048.1178@0.23.2048.1178" timestamp="1584230443341" />
+    <state x="480" y="273" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584232463827">
+      <screen x="0" y="23" width="2048" height="1178" />
+    </state>
+    <state x="480" y="273" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2048.1178@0.23.2048.1178" timestamp="1584232463827" />
+    <state x="753" y="402" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584232456040">
+      <screen x="0" y="23" width="2048" height="1178" />
+    </state>
+    <state x="753" y="402" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.2048.1178@0.23.2048.1178" timestamp="1584232456040" />
+    <state x="799" y="396" key="chooseDestDirectoryDialog" timestamp="1584231186877">
+      <screen x="0" y="23" width="2048" height="1178" />
+    </state>
+    <state x="799" y="396" key="chooseDestDirectoryDialog/0.23.2048.1178@0.23.2048.1178" timestamp="1584231186877" />
+    <state x="693" y="444" key="com.intellij.ide.util.TipDialog" timestamp="1584230427382">
+      <screen x="0" y="23" width="2048" height="1178" />
+    </state>
+    <state x="693" y="444" key="com.intellij.ide.util.TipDialog/0.23.2048.1178@0.23.2048.1178" timestamp="1584230427382" />
+  </component>
+</project>
