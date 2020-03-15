@@ -1,16 +1,13 @@
 package com.moezguer.controller;
 
-import com.moezguer.database.repo.BookRepository;
-import com.moezguer.exception.BookNotFoundException;
-import com.moezguer.exception.BookUnSupportedFieldPatchException;
 import com.moezguer.database.model.Book;
+import com.moezguer.database.repository.BookRepository;
+import com.moezguer.exception.BookNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 public class BookController {
@@ -23,7 +20,6 @@ public class BookController {
     List<Book> findAll() {
         return repository.findAll();
     }
-
 
 
     // Save
@@ -59,7 +55,7 @@ public class BookController {
     }
 
     // update author only
-    @PatchMapping("/books/{id}")
+/*    @PatchMapping("/books/{id}")
     Book patch(@RequestBody Map<String, String> update, @PathVariable Long id) {
 
         return repository.findById(id)
@@ -80,7 +76,7 @@ public class BookController {
                     throw new BookNotFoundException(id);
                 });
 
-    }
+    }*/
 
     @DeleteMapping("/books/{id}")
     void deleteBook(@PathVariable Long id) {

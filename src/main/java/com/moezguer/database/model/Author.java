@@ -1,13 +1,13 @@
 package com.moezguer.database.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.UUID;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -16,14 +16,18 @@ import java.util.UUID;
 public class Author {
 
     @Id
-    @GeneratedValue
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    List<Book> books = new ArrayList<>();
 
     private String name;
 
     private String surname;
 
-    public Author (String name, String surname){
+    public Author(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }

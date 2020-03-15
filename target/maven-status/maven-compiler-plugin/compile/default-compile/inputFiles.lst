@@ -1,0 +1,12 @@
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/database/model/Book.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/database/repo/BookRepository.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/AuthorNotFoundException.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/BookNotFoundException.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/CustomGlobalExceptionHandler.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/AuthorUnSupportedFieldPatchException.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/database/model/Author.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/controller/BookController.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/BookUnSupportedFieldPatchException.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/controller/AuthorController.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/database/repo/AuthorRepository.java
+/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/StartBookApplication.java
