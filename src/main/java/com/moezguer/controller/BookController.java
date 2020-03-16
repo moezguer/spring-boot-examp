@@ -5,57 +5,65 @@ import com.moezguer.database.repository.BookRepository;
 import com.moezguer.exception.BookNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
-public class BookController {
+@RestController public class BookController {
 
     @Autowired
     private BookRepository repository;
 
     // Find
     @GetMapping("/books")
-    List<Book> findAll() {
-        return repository.findAll();
+    List<Book> findAll(@RequestParam(value = "name", required = false) final String name) {
+        if (!StringUtils.isEmpty(name)) {
+            return repository.getBookByNameContainingIgnoreCase(name);
+        } else {
+            return repository.findAll();
+        }
     }
-
 
     // Save
     @PostMapping("/books")
     //return 201 instead of 200
     @ResponseStatus(HttpStatus.CREATED)
-    Book newBook(@RequestBody Book newBook) {
+    Book newBook(@RequestBody final Book newBook) {
         return repository.save(newBook);
     }
 
     // Find
     @GetMapping("/books/{id}")
-    Book findOne(@PathVariable Long id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new BookNotFoundException(id));
+    Book findOne(@PathVariable final Long id) {
+        return repository.findById(id).orElseThrow(() -> new BookNotFoundException(id));
     }
 
     // Save or update
     @PutMapping("/books/{id}")
-    Book saveOrUpdate(@RequestBody Book newBook, @PathVariable Long id) {
+    Book saveOrUpdate(@RequestBody final Book newBook, @PathVariable final Long id) {
 
-        return repository.findById(id)
-                .map(x -> {
-                    x.setName(newBook.getName());
-                    x.setAuthor(newBook.getAuthor());
-                    x.setPrice(newBook.getPrice());
-                    return repository.save(x);
-                })
-                .orElseGet(() -> {
-                    newBook.setId(id);
-                    return repository.save(newBook);
-                });
+        return repository.findById(id).map(x -> {
+            x.setName(newBook.getName());
+            x.setAuthor(newBook.getAuthor());
+            x.setPrice(newBook.getPrice());
+            return repository.save(x);
+        }).orElseGet(() -> {
+            newBook.setId(id);
+            return repository.save(newBook);
+        });
     }
 
-    // update author only
-/*    @PatchMapping("/books/{id}")
+/*    // update author only
+    @PatchMapping("/books/{id}")
     Book patch(@RequestBody Map<String, String> update, @PathVariable Long id) {
 
         return repository.findById(id)
@@ -79,7 +87,7 @@ public class BookController {
     }*/
 
     @DeleteMapping("/books/{id}")
-    void deleteBook(@PathVariable Long id) {
+    void deleteBook(@PathVariable final Long id) {
         repository.deleteById(id);
     }
 

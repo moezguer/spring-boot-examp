@@ -6,12 +6,19 @@ import com.moezguer.exception.AuthorNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
-public class AuthorController {
+@RestController public class AuthorController {
 
     @Autowired
     private AuthorRepository repository;
@@ -19,9 +26,8 @@ public class AuthorController {
     //find all
     @GetMapping("/authors")
     List<Author> findAll(
-            @RequestParam(value = "name", required = false) String name,
-            @RequestParam(value = "surname", required = false) String surname
-    ) {
+            @RequestParam(value = "name", required = false) final String name,
+            @RequestParam(value = "surname", required = false) final String surname) {
         if (StringUtils.isEmpty(name) && StringUtils.isEmpty(surname)) {
             return repository.findAll();
         } else if (StringUtils.isEmpty(name)) {
@@ -36,29 +42,25 @@ public class AuthorController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    Author newAuthor(@RequestBody Author newAuthor) {
+    Author newAuthor(@RequestBody final Author newAuthor) {
         return repository.save(newAuthor);
     }
 
     @GetMapping("/authors/{id}")
-    Author findOne(@PathVariable Long id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new AuthorNotFoundException(id));
+    Author findOne(@PathVariable final Long id) {
+        return repository.findById(id).orElseThrow(() -> new AuthorNotFoundException(id));
     }
 
-
     @PutMapping("/authors/{id}")
-    Author saveOrUpdate(@RequestBody Author newAuthor, @PathVariable Long id) {
+    Author saveOrUpdate(@RequestBody final Author newAuthor, @PathVariable final Long id) {
 
-        return repository.findById(id)
-                .map(x -> {
-                    x.setName(newAuthor.getName());
-                    x.setSurname(newAuthor.getSurname());
-                    return repository.save(newAuthor);
-                })
-                .orElseGet(() -> {
-                    throw new AuthorNotFoundException(id);
-                });
+        return repository.findById(id).map(x -> {
+            x.setName(newAuthor.getName());
+            x.setSurname(newAuthor.getSurname());
+            return repository.save(newAuthor);
+        }).orElseGet(() -> {
+            throw new AuthorNotFoundException(id);
+        });
 
     }
 
@@ -81,9 +83,8 @@ public class AuthorController {
                 });
     }*/
 
-
     @DeleteMapping("/authors/{id}")
-    void deleteAuthor(@PathVariable Long id) {
+    void deleteAuthor(@PathVariable final Long id) {
         repository.deleteById(id);
     }
 
