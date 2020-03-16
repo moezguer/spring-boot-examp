@@ -14,9 +14,14 @@ import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity @AllArgsConstructor @NoArgsConstructor @Data public class Author {
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Author {
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "author",
+               cascade = CascadeType.ALL)
     @JsonManagedReference
     List<Book> books = new ArrayList<>();
 

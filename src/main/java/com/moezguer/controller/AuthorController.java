@@ -18,16 +18,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController public class AuthorController {
+@RestController
+public class AuthorController {
 
-    @Autowired
-    private AuthorRepository repository;
+    @Autowired private AuthorRepository repository;
 
     //find all
     @GetMapping("/authors")
     List<Author> findAll(
-            @RequestParam(value = "name", required = false) final String name,
-            @RequestParam(value = "surname", required = false) final String surname) {
+            @RequestParam(value = "name",
+                          required = false)
+            final String name,
+            @RequestParam(value = "surname",
+                          required = false)
+            final String surname) {
         if (StringUtils.isEmpty(name) && StringUtils.isEmpty(surname)) {
             return repository.findAll();
         } else if (StringUtils.isEmpty(name)) {
@@ -42,17 +46,25 @@ import java.util.List;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    Author newAuthor(@RequestBody final Author newAuthor) {
+    Author newAuthor(
+            @RequestBody
+            final Author newAuthor) {
         return repository.save(newAuthor);
     }
 
     @GetMapping("/authors/{id}")
-    Author findOne(@PathVariable final Long id) {
+    Author findOne(
+            @PathVariable
+            final Long id) {
         return repository.findById(id).orElseThrow(() -> new AuthorNotFoundException(id));
     }
 
     @PutMapping("/authors/{id}")
-    Author saveOrUpdate(@RequestBody final Author newAuthor, @PathVariable final Long id) {
+    Author saveOrUpdate(
+            @RequestBody
+            final Author newAuthor,
+            @PathVariable
+            final Long id) {
 
         return repository.findById(id).map(x -> {
             x.setName(newAuthor.getName());
@@ -84,7 +96,9 @@ import java.util.List;
     }*/
 
     @DeleteMapping("/authors/{id}")
-    void deleteAuthor(@PathVariable final Long id) {
+    void deleteAuthor(
+            @PathVariable
+            final Long id) {
         repository.deleteById(id);
     }
 

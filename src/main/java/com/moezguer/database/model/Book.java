@@ -13,7 +13,11 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 
-@Entity @AllArgsConstructor @NoArgsConstructor @Data public class Book {
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Book {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JsonBackReference

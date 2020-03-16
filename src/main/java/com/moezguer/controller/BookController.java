@@ -18,14 +18,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController public class BookController {
+@RestController
+public class BookController {
 
-    @Autowired
-    private BookRepository repository;
+    @Autowired private BookRepository repository;
 
     // Find
     @GetMapping("/books")
-    List<Book> findAll(@RequestParam(value = "name", required = false) final String name) {
+    List<Book> findAll(
+            @RequestParam(value = "name",
+                          required = false)
+            final String name) {
         if (!StringUtils.isEmpty(name)) {
             return repository.getBookByNameContainingIgnoreCase(name);
         } else {
@@ -37,19 +40,27 @@ import java.util.List;
     @PostMapping("/books")
     //return 201 instead of 200
     @ResponseStatus(HttpStatus.CREATED)
-    Book newBook(@RequestBody final Book newBook) {
+    Book newBook(
+            @RequestBody
+            final Book newBook) {
         return repository.save(newBook);
     }
 
     // Find
     @GetMapping("/books/{id}")
-    Book findOne(@PathVariable final Long id) {
+    Book findOne(
+            @PathVariable
+            final Long id) {
         return repository.findById(id).orElseThrow(() -> new BookNotFoundException(id));
     }
 
     // Save or update
     @PutMapping("/books/{id}")
-    Book saveOrUpdate(@RequestBody final Book newBook, @PathVariable final Long id) {
+    Book saveOrUpdate(
+            @RequestBody
+            final Book newBook,
+            @PathVariable
+            final Long id) {
 
         return repository.findById(id).map(x -> {
             x.setName(newBook.getName());
@@ -87,7 +98,9 @@ import java.util.List;
     }*/
 
     @DeleteMapping("/books/{id}")
-    void deleteBook(@PathVariable final Long id) {
+    void deleteBook(
+            @PathVariable
+            final Long id) {
         repository.deleteById(id);
     }
 

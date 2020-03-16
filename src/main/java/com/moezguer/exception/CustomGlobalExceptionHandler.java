@@ -8,7 +8,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@ControllerAdvice public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler {
+@ControllerAdvice
+public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     // Let Spring handle the exception, we just override the status code
     @ExceptionHandler(BookNotFoundException.class)

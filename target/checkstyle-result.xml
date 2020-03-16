@@ -5,56 +5,23 @@
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/database/repository/BookRepository.java">
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/database/model/Author.java">
-<error line="35" column="19" severity="error" message="Parameter name should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="35" column="32" severity="error" message="Parameter surname should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/database/model/Book.java">
-<error line="32" column="17" severity="error" message="Parameter name should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="32" column="30" severity="error" message="Parameter author should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="32" column="45" severity="error" message="Parameter price should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="45" column="38" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/controller/AuthorController.java">
-<error line="30" column="13" severity="error" message="Parameter name should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="31" column="13" severity="error" message="Parameter surname should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="48" column="22" severity="error" message="Parameter newAuthor should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="53" column="20" severity="error" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="59" column="25" severity="error" message="Parameter newAuthor should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="59" column="56" severity="error" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="93" column="23" severity="error" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/controller/BookController.java">
-<error line="30" column="13" severity="error" message="Parameter name should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="43" column="18" severity="error" message="Parameter newBook should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="49" column="18" severity="error" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="56" column="23" severity="error" message="Parameter newBook should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="56" column="50" severity="error" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="96" column="21" severity="error" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/StartBookApplication.java">
-<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
-<error line="10" column="29" severity="error" message="Parameter args should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="21" severity="error" message="Line is longer than 120 characters (found 138)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="22" severity="error" message="Line is longer than 120 characters (found 137)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="23" severity="error" message="Line is longer than 120 characters (found 155)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="29" severity="error" message="Line is longer than 120 characters (found 147)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="30" severity="error" message="Line is longer than 120 characters (found 128)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="31" severity="error" message="Line is longer than 120 characters (found 148)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/BookNotFoundException.java">
-<error line="5" column="34" severity="error" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/AuthorNotFoundException.java">
-<error line="5" column="36" severity="error" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/CustomGlobalExceptionHandler.java">
-<error line="17" column="38" severity="error" message="Parameter response should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="23" column="45" severity="error" message="Parameter response should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/AuthorUnSupportedFieldPatchException.java">
-<error line="7" column="49" severity="error" message="Parameter keys should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 <file name="/Users/moezguer/Documents/GitFold/spring-boot-examp/src/main/java/com/moezguer/exception/BookUnSupportedFieldPatchException.java">
-<error line="7" column="47" severity="error" message="Parameter keys should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 </checkstyle>
