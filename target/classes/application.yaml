@@ -1,0 +1,12 @@
+## MySQL
+
+spring:
+    datasource:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/trialdb?useSSL=false
+      username: root
+      password: root1234
+
+    jpa:
+      hibernate:
+        ddl-auto: create-drop
