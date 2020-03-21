@@ -1,0 +1,24 @@
+version: '3.6'
+
+services:
+  mysql:
+    container_name: dbContainer
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: trialdb
+    ports:
+      - "3308:3306"
+
+  app:
+    restart: always
+    build: ./app
+    working_dir: /app
+    volumes:
+      - ./app:/app
+      - ~/.m2:/root/.m2
+    expose:
+      - "3308"
+    command: mvn clean spring-boot:run
+    depends_on:
+      - mysql

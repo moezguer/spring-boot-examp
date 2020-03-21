@@ -11,6 +11,8 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     List<Book> getBookByNameContainingIgnoreCase(String name);
 
+    Book findById(BigDecimal id);
+
     @Query("SELECT b FROM Book b WHERE b.price < 6")
     List<Book> findAllWithPriceFilter(BigDecimal price);
 

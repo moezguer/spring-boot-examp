@@ -1,11 +1,10 @@
-## MySQL
-
 spring:
+
     datasource:
       driverClassName: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/trialdb?useSSL=false
+      url: jdbc:mysql://localhost:3308/trialdb?useSSL=false&allowPublicKeyRetrieval=true
       username: root
-      password: root1234
+      password: root
 
     jpa:
       hibernate:
