@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "27b08aca-2a86-4476-9bc1-2d4ac5d0c6b9",
+		"name": "spring-boot-ex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "BulkPostForInit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n[\n\t{\n\t    \"author\":\n\t    \t{\n\t    \t\t\"name\": \"Santi\",\n\t    \t\t\"surname\": \"Deva\"\n\t    \t},\n\t    \"name\": \"A Guide to the Bodhisattva Way of Life\",\n\t    \"price\": 15.41\n\t},\n\t\n\t{\n        \"author\":\n        \t{\n        \t\t\"name\": \"Marie\",\n        \t\t\"surname\": \"Kondo\"\n        \t},\n        \"name\": \"The Life-Changing Magic of Tidying Up\",\n        \"price\": 5.69\n\t},\n\t\n\t{\n        \"author\":\n        \t{\n        \t\t\"name\": \"Martin\",\n        \t\t\"surname\": \"Fowler\"\n        \t},\n        \"name\": \"Refactoring: Improving the Design of Existing Codee\",\n        \"price\": 4.57\n\t}\n]\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/books/bulk",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"books",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"author\":\n        \t{\n        \t\t\"name\": \"Santi\",\n        \t\t\"surname\": \"Deva\"\n        \t},\n        \"name\": \"A Guide to the Bodhisattva Way of Life\",\n        \"price\": 15.41\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/books/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/books",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/books",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Mar 2020 19:54:47 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"A Guide to the Bodhisattva Way of Life\",\n        \"price\": 15.41\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Book by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/books/{{bookId}}",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"books",
+								"{{bookId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Books w/ NameFilter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/books/{{bookId}}?keyword=way",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"books",
+								"{{bookId}}"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "way"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save or Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"degis laaa\",\n    \"price\": 15.41\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/books/{{bookId}}",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"books",
+								"{{bookId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/books/{{bookId}}",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"books",
+								"{{bookId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book Name",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" = \"degistirdiler valla\"\n}"
+						},
+						"url": {
+							"raw": "{{path}}/books/{{bookId}}",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"books",
+								"{{bookId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Books w/ PriceFilter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "Get Authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/authors",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/books",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Mar 2020 19:54:47 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"A Guide to the Bodhisattva Way of Life\",\n        \"price\": 15.41\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Author by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/authors/{{authorId}}",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"authors",
+								"{{authorId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Authors w/ Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/authors/{{authorId}}?name=santi",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"authors",
+								"{{authorId}}"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "santi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/authors/{{authorId}}",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"authors",
+								"{{authorId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
