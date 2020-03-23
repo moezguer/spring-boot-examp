@@ -1,0 +1,16 @@
+#Mon Mar 23 16:42:25 CET 2020
+configuration*?=97F5DC8D137374BBF52CD5BE9B1D115FA24ED9BA
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/exception/BookNotFoundException.java=1584961871150
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/exception/AuthorNotFoundException.java=1584961871150
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/exception/AuthorUnSupportedFieldPatchException.java=1584961871150
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/database/repository/BookRepository.java=1584961871150
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/controller/BookController.java=1584961871149
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/database/repository/AuthorRepository.java=1584961871150
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/StartBookApplication.java=1584961871149
+module-resource*?\:checkstyle-xpath-suppressions.xml=5780ADD6458CB00CD6B3E8928246237D4359431D
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/exception/CustomGlobalExceptionHandler.java=1584961871151
+module-resource*?\:checkstyle-suppressions.xml=8350A5106C7D43E7DD0A31F90FD4177B2A0457F9
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/exception/BookUnSupportedFieldPatchException.java=1584961871150
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/database/model/Author.java=1584961871149
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/controller/AuthorController.java=1584961871149
+/Users/moezguer/Documents/GitFold/spring_boot/app/src/main/java/com/moezguer/database/model/Book.java=1584961871149
