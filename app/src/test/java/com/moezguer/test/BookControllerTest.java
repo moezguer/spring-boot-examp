@@ -16,6 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -30,11 +31,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-
 public class BookControllerTest {
+
 
     private static final ObjectMapper objectmapper = new ObjectMapper();
 
@@ -43,8 +45,8 @@ public class BookControllerTest {
     @MockBean private BookRepository mockBookRepository;
 
     @Before
-    public void init() throws Exception {
-        Book book = new Book(1L, "Book Name", new Author("haci", "dayi"), new BigDecimal("9.99"));
+    public void init() {
+        Book book = new Book(1L, "Book Name", new Author("Arthuro", "Vidal"), new BigDecimal("9.99"));
         when(mockBookRepository.findById(1L)).thenReturn(Optional.of(book));
     }
 
@@ -70,7 +72,7 @@ public class BookControllerTest {
     @Test
     public void save_Book() throws Exception {
 
-        Book newBook = new Book(5L, "Booky Booky", new Author("ali", "emmi"), new BigDecimal("91.99"));
+        Book newBook = new Book(5L, "Booky", new Author("De", "Jong"), new BigDecimal("91.99"));
         when(mockBookRepository.save(any(Book.class))).thenReturn(newBook);
 
         mockMvc.perform(post("/books").content(objectmapper.writeValueAsString(newBook))

@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.29">
+<file name="/app/src/main/java/com/moezguer/database/repository/AuthorRepository.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/database/repository/BookRepository.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/database/model/Author.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/database/model/Book.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/controller/AuthorController.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/controller/BookController.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/StartBookApplication.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/exception/BookNotFoundException.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/exception/AuthorNotFoundException.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/exception/CustomGlobalExceptionHandler.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/exception/AuthorUnSupportedFieldPatchException.java">
+</file>
+<file name="/app/src/main/java/com/moezguer/exception/BookUnSupportedFieldPatchException.java">
+</file>
 </checkstyle>
