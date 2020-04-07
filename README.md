@@ -38,6 +38,7 @@ From the terminal of the IDE, in order to have the docker containers to be insta
 
 ## Features
 It is a sample rest api implementation with the features below;
+
 	-Mysql
 	-H2 DB used for unit tests
 	-Unit Tests implemented for Controller
